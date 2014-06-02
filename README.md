@@ -1,4 +1,1 @@
-simple_api
-==========
-
-a basic restful Flask/Flask-Restful/SQLAlchemy REST API service
+Just a demo REST API using Flask, Flask-Restful and SQLAlchemy
