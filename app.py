@@ -26,7 +26,7 @@ class TodoResource(Resource):
         todo = session.query(Todo).filter(Todo.id == todo_id).first()
         if not todo:
             abort(404, message="Todo {} doesn't exist".format(todo_id))
-        return todo
+        return todo.serialize
 
     def delete(self, todo_id):
         todo = session.query(Todo).filter(Todo.id == todo_id).first()
@@ -34,7 +34,7 @@ class TodoResource(Resource):
             abort(404, message="Todo {} doesn't exist".format(todo_id))
         session.delete(todo)
         session.commit()
-        return '', 204
+        return {}, 204
 
     def put(self, todo_id):
         parsed_args = parser.parse_args()
@@ -42,7 +42,7 @@ class TodoResource(Resource):
         todo.task = parsed_args['task']
         session.add(todo)
         session.commit()
-        return todo, 201
+        return todo.serialize, 201
 
 
 class TodoListResource(Resource):
