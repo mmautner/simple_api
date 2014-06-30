@@ -22,13 +22,13 @@ Just a demo REST API using Flask, Flask-Restful and SQLAlchemy
 >> requests.post('http://localhost:5000/todos',
                  headers={'Content-Type': 'application/json'},
                  data=json.dumps({'task': 'go outside!'})).json()
-{u'id': 1, u'task': u'go outside!'}
+{u'id': 1, u'task': u'go outside!', u'uri': u'http://localhost:5000/todos/1'}
 >> requests.get('http://localhost:5000/todos/1').json()
-{u'id': 1, u'task': u'go outside!'}
+{u'id': 1, u'task': u'go outside!', u'uri': u'http://localhost:5000/todos/1'}
 >> requests.put('http://localhost:5000/todos/1',
                 headers={'Content-Type': 'application/json'},
                 data=json.dumps({'task': 'go to the gym'})).json()
-{u'id': 1, u'task': u'go to the gym'}
+{u'id': 1, u'task': u'go to the gym', u'uri': u'http://localhost:5000/todos/1'}
 >> requests.delete('http://localhost:5000/todos/1')
 >> requests.get('http://localhost:5000/todos').json()
 []
