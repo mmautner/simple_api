@@ -13,14 +13,6 @@ class Todo(Base):
     id = Column(Integer, primary_key=True)
     task = Column(String(255))
 
-    @property
-    def serialize(self):
-       """Return object data in easily serializeable format"""
-       return {
-           'id'         : self.id,
-           'task'  : self.task
-       }
-
 if __name__ == "__main__":
     from sqlalchemy import create_engine
     from settings import DB_URI
