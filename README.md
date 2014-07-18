@@ -1,4 +1,4 @@
-Just a demo REST API using Flask, Flask-Restful and SQLAlchemy
+Demo RESTful HTTP API using Flask, Flask-Restful and SQLAlchemy
 ===================
 
 1. Install requisite packages:
