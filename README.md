@@ -1,21 +1,20 @@
-Demo RESTful HTTP API using Flask, Flask-Restful and SQLAlchemy
+Demo RESTful HTTP API using [Flask](https://github.com/pallets/flask), [Flask-Restful](https://github.com/flask-restful/flask-restful) and [SQLAlchemy](https://github.com/zzzeek/sqlalchemy)
 ===================
 
 1. Install requisite packages:
-
-    pip install -r requirements.txt
-
-2. Create tables:
-
-    ./models.py
-
-3. Run service:
-
-    ./app.py
-
-4. Give it a try:
-
+```shell
+$ pip install -r requirements.txt
 ```
+2. Create tables:
+```shell
+$ ./models.py
+```
+3. Run service:
+```
+$ python app.py
+```
+4. Give it a try:
+```shell
 >> import requests, json
 >> requests.get('http://localhost:5000/todos').json()
 []
@@ -34,5 +33,4 @@ Demo RESTful HTTP API using Flask, Flask-Restful and SQLAlchemy
 []
 ```
 
-Don't forget that you must past a "Content-Type: application/json" header along
-w/ your request!
+Don't forget that you must pass a "Content-Type: application/json" header along with your request!
