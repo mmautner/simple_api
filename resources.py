@@ -2,11 +2,11 @@
 from models import Todo
 from db import session
 
-from flask.ext.restful import reqparse
-from flask.ext.restful import abort
-from flask.ext.restful import Resource
-from flask.ext.restful import fields
-from flask.ext.restful import marshal_with
+from flask_restful import reqparse
+from flask_restful import abort
+from flask_restful import Resource
+from flask_restful import fields
+from flask_restful import marshal_with
 
 todo_fields = {
     'id': fields.Integer,
