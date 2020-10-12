@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-
 from flask import Flask
 from flask_restful import Api
 
-from resources import TodoListResource, TodoResource
+from resources import TodoListResource
+from resources import TodoResource
 
 app = Flask(__name__)
 api = Api(app)
