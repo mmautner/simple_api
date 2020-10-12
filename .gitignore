@@ -53,3 +53,11 @@ coverage.xml
 docs/_build/
 
 main.db
+
+*.xml
+*.iml
+*.idea
+
+# Default ignored files
+/shelf/
+/workspace.xml
