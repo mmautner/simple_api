@@ -9,8 +9,8 @@ app = Flask(__name__)
 api = Api(app)
 
 
-api.add_resource(TodoListResource, '/todos', endpoint='todos')
-api.add_resource(TodoResource, '/todos/<string:id>', endpoint='todo')
+api.add_resource(TodoListResource, "/todos", endpoint="todos")
+api.add_resource(TodoResource, "/todos/<string:id>", endpoint="todo")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
