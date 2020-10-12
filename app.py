@@ -8,7 +8,6 @@ from resources import TodoResource
 app = Flask(__name__)
 api = Api(app)
 
-
 api.add_resource(TodoListResource, "/todos", endpoint="todos")
 api.add_resource(TodoResource, "/todos/<string:id>", endpoint="todo")
 
