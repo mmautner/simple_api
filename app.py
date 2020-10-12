@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
+from resources import TodoResource
+from resources import TodoListResource
 from flask import Flask
 from flask_restful import Api
 
 app = Flask(__name__)
 api = Api(app)
 
-from resources import TodoListResource
-from resources import TodoResource
 
 api.add_resource(TodoListResource, '/todos', endpoint='todos')
 api.add_resource(TodoResource, '/todos/<string:id>', endpoint='todo')

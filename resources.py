@@ -17,6 +17,7 @@ todo_fields = {
 parser = reqparse.RequestParser()
 parser.add_argument('task', type=str)
 
+
 class TodoResource(Resource):
     @marshal_with(todo_fields)
     def get(self, id):
